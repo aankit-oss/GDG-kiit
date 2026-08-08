@@ -18,11 +18,17 @@ from db_models import User
 
 _pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
+def _safe_truncate(plain: str) -> str:
+    """Bcrypt silently truncates at 72 bytes; passlib raises ValueError in some builds.
+    Truncate explicitly to avoid the bug."""
+    encoded = plain.encode("utf-8")
+    return encoded[:72].decode("utf-8", errors="ignore")
+
 def hash_password(plain: str) -> str:
-    return _pwd_context.hash(plain)
+    return _pwd_context.hash(_safe_truncate(plain))
 
 def verify_password(plain: str, hashed: str) -> bool:
-    return _pwd_context.verify(plain, hashed)
+    return _pwd_context.verify(_safe_truncate(plain), hashed)
 
 
 # ── JWT ───────────────────────────────────────────────────────────────────────
