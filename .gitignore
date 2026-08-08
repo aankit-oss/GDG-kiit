@@ -1,0 +1,9 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Exceptions (keep templates tracked)
+!.env.example

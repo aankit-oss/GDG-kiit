@@ -1,0 +1,177 @@
+act: "Digital Personal Data Protection Act, 2023"
+act_short: "DPDP 2023"
+version: "1.0.0"
+rules:
+  - id: DPDP-001
+    title: "Lawful Purpose for Data Processing"
+    description: >
+      Personal data must be processed only for a lawful purpose for which the
+      data principal has given consent or which is permitted under the Act.
+    check_prompt: >
+      Does this document specify that personal data is collected and processed
+      only for lawful, specified purposes for which the data principal has given
+      consent? Look for explicit statements about purpose limitation and consent.
+    severity: HIGH
+    section: "Section 4"
+
+  - id: DPDP-002
+    title: "Free, Specific, and Informed Consent"
+    description: >
+      Consent must be free, specific, informed, unconditional, and unambiguous,
+      given through a clear affirmative action.
+    check_prompt: >
+      Does this document ensure that consent is obtained freely, specifically,
+      and with full information? Check for any pre-ticked boxes, bundled consent,
+      or vague consent language that would make consent invalid.
+    severity: HIGH
+    section: "Section 6"
+
+  - id: DPDP-003
+    title: "Right to Withdraw Consent"
+    description: >
+      The data principal must be able to withdraw consent at any time. The
+      ease of withdrawal must be comparable to the ease of giving consent.
+    check_prompt: >
+      Does this document provide a mechanism for users to withdraw their consent
+      at any time, and is this withdrawal process as easy as the process of
+      giving consent?
+    severity: HIGH
+    section: "Section 6(4)"
+
+  - id: DPDP-004
+    title: "Notice Before Consent"
+    description: >
+      Before processing personal data, the data fiduciary must provide a notice
+      specifying the personal data to be collected and the purpose of processing.
+    check_prompt: >
+      Does this document specify that a clear notice is provided to the data
+      principal before collecting personal data, describing what data is collected
+      and why?
+    severity: HIGH
+    section: "Section 5"
+
+  - id: DPDP-005
+    title: "Data Quality and Accuracy"
+    description: >
+      The data fiduciary must make reasonable efforts to ensure that the
+      personal data is accurate and complete.
+    check_prompt: >
+      Does this document commit to maintaining accuracy and completeness of
+      personal data, and are there processes for users to correct inaccurate data?
+    severity: MEDIUM
+    section: "Section 8(3)"
+
+  - id: DPDP-006
+    title: "Storage Limitation"
+    description: >
+      Personal data must not be retained beyond the period necessary for the
+      purpose for which it was collected.
+    check_prompt: >
+      Does this document specify data retention periods or criteria for deletion
+      of personal data once it is no longer needed for its original purpose?
+    severity: HIGH
+    section: "Section 8(7)"
+
+  - id: DPDP-007
+    title: "Right to Access Information"
+    description: >
+      Data principals have the right to obtain a summary of personal data
+      processed and the processing activities undertaken.
+    check_prompt: >
+      Does this document describe the data principal's right to access their
+      personal data and obtain information about how it is being processed?
+    severity: MEDIUM
+    section: "Section 11"
+
+  - id: DPDP-008
+    title: "Right to Correction and Erasure"
+    description: >
+      Data principals have the right to correction, completion, updating, and
+      erasure of their personal data.
+    check_prompt: >
+      Does this document provide for the data principal's right to have their
+      personal data corrected, completed, updated, or erased upon request?
+    severity: HIGH
+    section: "Section 12"
+
+  - id: DPDP-009
+    title: "Data Breach Notification"
+    description: >
+      In the event of a personal data breach, the data fiduciary must notify
+      the Data Protection Board and each affected data principal.
+    check_prompt: >
+      Does this document describe the organization's obligation to notify users
+      and the Data Protection Board in the event of a data breach?
+    severity: HIGH
+    section: "Section 8(6)"
+
+  - id: DPDP-010
+    title: "Children's Data Protection"
+    description: >
+      Processing personal data of children requires verifiable parental consent.
+      No behavioural targeting of children is permitted.
+    check_prompt: >
+      Does this document address the processing of personal data belonging to
+      children (under 18)? Does it require parental consent and prohibit
+      behavioural targeting of children?
+    severity: HIGH
+    section: "Section 9"
+
+  - id: DPDP-011
+    title: "Security Safeguards"
+    description: >
+      The data fiduciary must implement appropriate technical and organizational
+      measures to protect personal data.
+    check_prompt: >
+      Does this document describe the security measures implemented to protect
+      personal data from unauthorized access, loss, or misuse?
+    severity: HIGH
+    section: "Section 8(5)"
+
+  - id: DPDP-012
+    title: "Grievance Redressal Mechanism"
+    description: >
+      Data fiduciaries must establish an effective grievance redressal mechanism
+      for data principals.
+    check_prompt: >
+      Does this document provide a mechanism for data principals to raise
+      complaints or grievances about data processing, with a designated contact
+      or process?
+    severity: MEDIUM
+    section: "Section 13"
+
+  - id: DPDP-013
+    title: "Prohibition on Sale of Personal Data"
+    description: >
+      Personal data must not be sold or transferred to third parties for
+      commercial purposes without explicit consent.
+    check_prompt: >
+      Does this document prohibit the sale of personal data to third parties,
+      or if it allows third-party sharing, does it require explicit consent
+      for commercial use of that data?
+    severity: HIGH
+    section: "Section 16"
+
+  - id: DPDP-014
+    title: "Cross-Border Data Transfer Restrictions"
+    description: >
+      Personal data may only be transferred outside India to countries approved
+      by the Central Government.
+    check_prompt: >
+      Does this document address the transfer of personal data outside India?
+      Does it specify that data is only transferred to approved jurisdictions
+      or under approved frameworks?
+    severity: MEDIUM
+    section: "Section 16"
+
+  - id: DPDP-015
+    title: "Identity of Data Fiduciary"
+    description: >
+      The notice must clearly identify the data fiduciary — the entity
+      collecting and processing personal data.
+    check_prompt: >
+      Does this document clearly identify the organization (data fiduciary)
+      collecting and processing the personal data, including contact information
+      or a Data Protection Officer?
+    severity: MEDIUM
+    section: "Section 5(a)"

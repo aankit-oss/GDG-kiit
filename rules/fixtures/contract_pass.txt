@@ -1,0 +1,47 @@
+SERVICE AGREEMENT
+Between: Alpha Consulting Pvt. Ltd. ("Service Provider") and Beta Corp Pvt. Ltd. ("Client")
+Date: January 15, 2026
+
+OFFER AND ACCEPTANCE
+The Service Provider offers to provide software development services as described herein,
+and the Client accepts this offer unconditionally on the terms set out below.
+
+CONSIDERATION
+In consideration of the services rendered, the Client agrees to pay the Service Provider
+a fixed fee of INR 5,00,000 (Five Lakh Rupees) upon completion of the deliverables.
+This constitutes lawful monetary consideration exchanged for professional services.
+
+CAPACITY
+Both parties represent and warrant that:
+(a) Each party is a company duly incorporated under the Companies Act, 2013;
+(b) Each party is of legal capacity to enter into this Agreement;
+(c) The signatories are duly authorized representatives of their respective companies;
+(d) Neither party is disqualified from contracting under any applicable law.
+
+FREE CONSENT
+Both parties affirm that this Agreement is entered into freely and voluntarily,
+without any coercion, undue influence, fraud, misrepresentation, or mistake.
+Each party has had the opportunity to seek independent legal advice before signing.
+
+LAWFUL OBJECT
+The purpose of this Agreement is the lawful provision of software development services
+including design, development, testing, and deployment of enterprise software. The object
+of this Agreement is not forbidden by any law, is not fraudulent, and is not against
+public policy or morality.
+
+SCOPE OF SERVICES
+The Service Provider shall deliver:
+1. Requirements analysis and system design — by February 28, 2026
+2. Development of core modules — by April 30, 2026
+3. Testing and quality assurance — by May 31, 2026
+4. Deployment and handover — by June 15, 2026
+
+Payment shall be made in two instalments: 50% upon signing and 50% upon delivery.
+
+GOVERNING LAW
+This Agreement shall be governed by the laws of India. Disputes shall be resolved
+by arbitration under the Arbitration and Conciliation Act, 1996.
+
+SIGNATURES
+For Alpha Consulting Pvt. Ltd.: _________________ Date: ___________
+For Beta Corp Pvt. Ltd.: _________________ Date: ___________

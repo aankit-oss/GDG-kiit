@@ -1,0 +1,78 @@
+PRIVACY POLICY — TechDemo Solutions Pvt. Ltd.
+Last Updated: January 1, 2026
+
+1. IDENTITY OF DATA FIDUCIARY
+TechDemo Solutions Pvt. Ltd. (CIN: U72900KA2020PTC123456), having its registered office at 
+123 Tech Park, Bengaluru, Karnataka 560001, India, is the Data Fiduciary for the purposes of 
+the Digital Personal Data Protection Act, 2023. For data protection queries, contact our 
+Data Protection Officer at dpo@techdemo.example.com.
+
+2. PERSONAL DATA WE COLLECT AND PURPOSE
+We collect the following personal data solely for the purposes described below:
+- Full name and email address: for account creation and communication
+- Payment information: for processing subscription payments
+- Usage data: for improving our services
+
+We process your personal data only for specified, lawful purposes for which you have given 
+explicit consent. We do not use your personal data for any purpose beyond what is stated in 
+this policy without obtaining fresh consent.
+
+3. CONSENT
+We obtain your free, specific, informed, and unambiguous consent before collecting your 
+personal data. Consent is obtained through a clear affirmative action (clicking "I Agree" 
+after reading this policy). We do not use pre-ticked boxes or bundled consent. You may 
+withdraw your consent at any time through your account settings, with the same ease as 
+providing it.
+
+4. NOTICE
+Before collecting your personal data, we provide a clear notice specifying:
+(a) the personal data to be collected
+(b) the purpose of processing
+(c) your rights as a data principal
+This notice is available in plain language at the point of data collection.
+
+5. DATA RETENTION
+We retain your personal data only for as long as necessary to fulfil the purpose for which 
+it was collected, or as required by applicable law. Personal data is deleted within 30 days 
+of account closure or withdrawal of consent, whichever is earlier.
+
+6. YOUR RIGHTS
+You have the right to:
+(a) Access a summary of your personal data and processing activities
+(b) Correct or update inaccurate or incomplete personal data
+(c) Request erasure of your personal data (right to be forgotten)
+(d) Withdraw consent at any time without affecting prior processing
+(e) File a complaint with us or the Data Protection Board of India
+
+7. DATA SECURITY
+We implement appropriate technical and organizational measures to protect your personal data 
+from unauthorized access, loss, alteration, or disclosure. These measures include encryption 
+at rest and in transit, access controls, and regular security audits.
+
+8. DATA BREACH NOTIFICATION
+In the event of a personal data breach that is likely to cause harm to you, we will notify 
+the Data Protection Board of India and you (the affected data principal) as soon as 
+reasonably practicable, providing details of the breach and steps taken.
+
+9. CHILDREN'S DATA
+Our services are not directed at children under the age of 18. We do not knowingly collect 
+personal data from children. Where we become aware that a child's data has been collected, 
+we will delete it promptly. If parental consent is required for any service, we will obtain 
+verifiable parental consent before processing the child's data. We do not conduct behavioural 
+targeting of children.
+
+10. THIRD-PARTY SHARING
+We do not sell your personal data to third parties. We may share data with service providers 
+under strict data processing agreements. We do not use your data for commercial purposes 
+by third parties without your explicit consent.
+
+11. CROSS-BORDER DATA TRANSFERS
+Personal data is stored in India. Where data is transferred outside India, we ensure such 
+transfer is only to countries approved by the Central Government under Section 16 of the 
+Digital Personal Data Protection Act, 2023.
+
+12. GRIEVANCE REDRESSAL
+If you have any concerns or complaints about our handling of your personal data, please 
+contact our Grievance Officer at grievances@techdemo.example.com. We will acknowledge your 
+complaint within 48 hours and resolve it within 30 days. You may also escalate unresolved 
+complaints to the Data Protection Board of India.

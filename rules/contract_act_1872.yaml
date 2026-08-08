@@ -1,0 +1,90 @@
+act: "Indian Contract Act, 1872"
+act_short: "Contract Act 1872"
+version: "1.0.0"
+rules:
+  - id: ICA-001
+    title: "Lawful Offer and Acceptance"
+    description: >
+      A contract requires a valid offer by one party and an unconditional
+      acceptance by another. Both must be clear and communicated.
+    check_prompt: >
+      Does this contract document contain a clear offer by one party and an
+      unconditional acceptance by the other? Are the offer and acceptance terms
+      clearly identified and communicated?
+    severity: HIGH
+    section: "Section 2(a), 2(b)"
+
+  - id: ICA-002
+    title: "Lawful Consideration"
+    description: >
+      Every contract must be supported by lawful consideration — something of
+      value exchanged between the parties. Consideration must not be illegal,
+      immoral, or against public policy.
+    check_prompt: >
+      Does this contract specify the consideration (payment, services, goods, or
+      other value) exchanged by both parties? Is the consideration clearly stated
+      and lawful (not illegal, immoral, or against public policy)?
+    severity: HIGH
+    section: "Section 2(d), 10, 23"
+
+  - id: ICA-003
+    title: "Capacity to Contract"
+    description: >
+      Parties must be competent to contract: of the age of majority (18+),
+      of sound mind, and not disqualified by law.
+    check_prompt: >
+      Does this contract address the legal capacity of the parties to enter into
+      the agreement? Are there representations that parties are of legal age
+      (18+), of sound mind, and not otherwise disqualified from contracting?
+    severity: HIGH
+    section: "Section 11, 12"
+
+  - id: ICA-004
+    title: "Free Consent"
+    description: >
+      Consent must be free — not caused by coercion, undue influence, fraud,
+      misrepresentation, or mistake.
+    check_prompt: >
+      Does this contract contain any language suggesting the consent of either
+      party was obtained through coercion, undue influence, fraud,
+      misrepresentation, or mistake? Alternatively, does it affirm that consent
+      is freely given?
+    severity: HIGH
+    section: "Section 13, 14, 15, 16, 17, 18, 19, 20"
+
+  - id: ICA-005
+    title: "Lawful Object"
+    description: >
+      The object of the contract must be lawful. A contract is void if its
+      object is forbidden by law, fraudulent, involves harm to others, or is
+      immoral or against public policy.
+    check_prompt: >
+      Is the purpose or subject matter of this contract lawful? Does the
+      contract's object appear to be forbidden by any law, fraudulent, harmful
+      to others, or against public policy?
+    severity: HIGH
+    section: "Section 10, 23"
+
+  - id: ICA-006
+    title: "Not Expressly Declared Void"
+    description: >
+      The contract must not fall into categories expressly declared void:
+      restraint of trade, restraint of legal proceedings, uncertain agreements, wagering.
+    check_prompt: >
+      Does this contract contain clauses that restrain a party from exercising
+      a lawful profession or trade, restrain legal proceedings, create
+      uncertainty in obligations, or constitute a wagering agreement?
+    severity: HIGH
+    section: "Section 26, 27, 28, 29, 30"
+
+  - id: ICA-007
+    title: "Definite and Certain Terms"
+    description: >
+      The terms of the contract must be definite and certain. An agreement whose
+      meaning is not certain or capable of being made certain is void.
+    check_prompt: >
+      Are the key obligations, deliverables, timelines, and payment terms in
+      this contract clearly and definitely stated? Or are there material terms
+      that are vague, ambiguous, or left to be determined later?
+    severity: MEDIUM
+    section: "Section 29"

@@ -1,0 +1,36 @@
+TERMS OF USE — BadApp Technologies
+(This document intentionally lacks proper privacy protections)
+
+1. ABOUT US
+We are BadApp Technologies. We collect your data.
+
+2. DATA COLLECTION
+We collect your name, email, location, contacts, browsing history, and any other 
+information we deem useful. By using our app, you agree we can collect anything 
+we want, at any time, for any purpose we decide later. Your continued use of the 
+app means you're okay with all of this.
+
+3. HOW WE USE YOUR DATA
+We use your data for:
+- Improving our product
+- Advertising
+- Selling to third parties who pay us
+- Any other purposes we think of
+
+We may share your personal information with our business partners, advertisers, 
+data brokers, and any company we sell to in the future. We make no promises about 
+how these third parties will use your data.
+
+4. CHILDREN
+Our app is for everyone. We don't verify ages. Kids can use it too.
+
+5. DATA SECURITY
+We try our best to keep your data safe but make no guarantees.
+
+6. CHANGES
+We can change this policy any time without telling you. By using the app after 
+changes, you accept them.
+
+7. CONTACT
+Email us at info@badapp.example.com if you have questions, but we probably won't 
+respond within any particular timeframe.
