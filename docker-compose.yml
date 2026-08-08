@@ -3,6 +3,9 @@ services:
     build: ./backend
     ports:
       - "8000:8000"
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
     environment:
       - NVIDIA_API_KEY=${NVIDIA_API_KEY}
       - GEMINI_API_KEY=${GEMINI_API_KEY}

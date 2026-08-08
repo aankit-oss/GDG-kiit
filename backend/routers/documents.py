@@ -74,8 +74,15 @@ async def upload_document(file: UploadFile = File(...)) -> UploadResponse:
         )
 
     # Store in vector DB
-    vs = get_vector_store()
-    vs.add_chunks(chunks)
+    try:
+        vs = get_vector_store()
+        vs.add_chunks(chunks)
+    except Exception as e:
+        logger.exception("Vector store indexing failed for %s", file.filename)
+        raise HTTPException(
+            status_code=500,
+            detail=f"Vector indexing failed: {e}. Check network connection for model download.",
+        )
 
     # Persist document metadata
     docs = _load_docs()
