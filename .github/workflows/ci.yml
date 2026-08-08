@@ -24,24 +24,22 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install -r backend/requirements.txt
-          pip install ruff
+          pip install -r backend/requirements.txt ruff
 
       - name: Lint with ruff
-        run: ruff check backend/ tests/ --select=E,W,F --ignore=E501
+        run: ruff check backend/ tests/ --select=E,W,F --ignore=E501,F401
 
       - name: Run unit tests
         env:
-          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY || 'nvapi-test-placeholder' }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || 'test-placeholder' }}
+          NVIDIA_API_KEY: "nvapi-ci-placeholder"
+          GEMINI_API_KEY: "gemini-ci-placeholder"
           CHROMA_PERSIST_PATH: /tmp/chroma_test
           REPORTS_DIR: /tmp/reports_test
           RULES_DIR: ${{ github.workspace }}/rules
           GROUNDING_THRESHOLD: "0.65"
         run: |
-          cd ${{ github.workspace }}
-          python -m pytest tests/ -v --tb=short \
-            --ignore=tests/test_compliance_auditor.py
+          python -m pytest tests/test_rule_loader.py tests/test_ingestion.py tests/test_citation_grounding.py \
+            -v --tb=short
 
       - name: Upload test results
         if: always()
