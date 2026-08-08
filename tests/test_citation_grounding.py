@@ -11,12 +11,12 @@ from unittest.mock import MagicMock, patch
 from dataclasses import dataclass
 from typing import Optional
 
-# Patch openai before importing the skill
+# Patch openai before importing the skill (must precede skill import)
 import sys
 sys.modules.setdefault("openai", MagicMock())
 
-from skills.citation_grounding import CitationGroundingSkill, GroundingResult
-from models import Chunk
+from skills.citation_grounding import CitationGroundingSkill, GroundingResult  # noqa: E402
+from models import Chunk  # noqa: E402
 
 
 def make_chunk(text: str, chunk_id: str = "chunk_test_001", doc_id: str = "doc_001") -> Chunk:
