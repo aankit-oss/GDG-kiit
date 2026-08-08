@@ -72,7 +72,7 @@ def get_current_user(
             headers={"WWW-Authenticate": "Bearer"},
         )
     user_id = _decode_token(credentials.credentials)
-    user = db.query(User).filter(User.id == user_id, User.is_active == True).first()
+    user = db.query(User).filter(User.id == user_id, User.is_active == True).first()  # noqa: E712
     if user is None:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found.")
     return user
@@ -94,6 +94,6 @@ def get_optional_user(
         return None
     try:
         user_id = _decode_token(credentials.credentials)
-        return db.query(User).filter(User.id == user_id, User.is_active == True).first()
+        return db.query(User).filter(User.id == user_id, User.is_active == True).first()  # noqa: E712
     except HTTPException:
         return None

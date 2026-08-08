@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from datetime import datetime
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy import func
 from sqlalchemy.orm import Session
@@ -63,7 +63,7 @@ def get_stats(
 ) -> DashboardStats:
     month = _current_month()
     total = db.query(func.count(User.id)).scalar()
-    active = db.query(func.count(User.id)).filter(User.is_active == True).scalar()
+    active = db.query(func.count(User.id)).filter(User.is_active == True).scalar()  # noqa: E712
 
     plan_counts = dict(
         db.query(Subscription.plan, func.count(Subscription.id))
@@ -115,7 +115,6 @@ def update_plan(
     _admin: User = Depends(get_current_admin),
 ) -> dict:
     if plan not in ("free", "pro", "enterprise"):
-        from fastapi import HTTPException
         raise HTTPException(status_code=400, detail="Invalid plan.")
     sub = db.query(Subscription).filter_by(user_id=user_id).first()
     if sub:
