@@ -20,16 +20,27 @@ Rule sets covered:
 
 ## Quick Start
 
-### Prerequisites
-- Python 3.11+
-- Node.js 22+ (LTS)
-- Docker Desktop (for `docker compose` path)
+### ⚡ 1-Click Startup (Recommended)
 
-### Option A — Docker Compose (recommended)
+Simply run the startup script for your operating system:
+
+**Windows (PowerShell):**
+```powershell
+.\run.ps1
+```
+
+**Linux / macOS (Bash):**
+```bash
+chmod +x run.sh && ./run.sh
+```
+
+---
+
+### Manual Docker Setup
 
 ```bash
 cp .env.example .env
-# Fill in your API keys in .env
+# Fill in your API keys in .env if needed
 docker compose up --build
 ```
 
