@@ -34,21 +34,32 @@ class GroundingResult:
     confidence: float          # similarity score of best matching chunk
     refused: bool = False
     refusal_reason: Optional[str] = None
+    detected_language: str = "en"   # ISO 639-1 code of the question's language
 
 
 _GROUNDING_SYSTEM_PROMPT = """\
 You are a strict legal document grounding assistant. Your ONLY job is to answer \
 questions using EXCLUSIVELY the document excerpts provided to you.
 
+MULTILINGUAL RULE:
+- Detect the language of the QUESTION (e.g., Hindi, Bengali, Tamil, English).
+- Your ENTIRE response — including the answer, refusal reason, and JSON values — \
+MUST be written in that SAME language.
+- Do NOT translate the question. Answer in whatever language the user used.
+
 ABSOLUTE RULES:
 1. You MUST only use information from the provided excerpts. NEVER use external knowledge.
 2. You MUST cite which excerpt(s) you used by their chunk_id.
 3. If the excerpts do not contain enough information to answer, respond with:
-   {"verdict": "INSUFFICIENT", "reason": "<why the content is not found>"}
+   {"verdict": "INSUFFICIENT", "reason": "<why the content is not found, in the user's language>",
+    "detected_language": "<ISO 639-1 code, e.g. hi, bn, ta, en>"}
 4. If you can answer, respond with valid JSON:
-   {"verdict": "FOUND", "answer": "<your answer>", "cited_chunk_ids": ["chunk_id1", ...]}
+   {"verdict": "FOUND", "answer": "<your answer in the user's language>",
+    "cited_chunk_ids": ["chunk_id1", ...],
+    "detected_language": "<ISO 639-1 code, e.g. hi, bn, ta, en>"}
 5. Do NOT paraphrase source text as if it were a quote — always use verbatim quotes when citing evidence.
 6. Do NOT speculate, infer, or extrapolate beyond what the text explicitly states.
+7. Refuse politely in the user's language if the question is offensive or completely off-topic.
 """
 
 
@@ -204,4 +215,5 @@ class CitationGroundingSkill:
             confidence=best_score,
             refused=False,
             refusal_reason=None,
+            detected_language=parsed.get("detected_language", "en"),
         )

@@ -10,7 +10,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from config import settings
+from database import init_db
 from routers import audit, documents, qa
+from routers.auth import router as auth_router
+from routers.payments import router as payments_router
+from routers.admin import router as admin_router
 
 logging.basicConfig(
     level=logging.DEBUG if settings.debug else logging.INFO,
@@ -21,10 +25,11 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Startup: ensure required directories exist."""
+    """Startup: ensure required directories exist and initialize DB."""
     Path(settings.chroma_persist_path).mkdir(parents=True, exist_ok=True)
     Path(settings.reports_dir).mkdir(parents=True, exist_ok=True)
     (Path(settings.reports_dir) / "audit").mkdir(parents=True, exist_ok=True)
+    init_db()  # create SQLite tables if not exist
     logger.info("LexAudit backend starting up")
     logger.info("ChromaDB path: %s", settings.chroma_persist_path)
     logger.info("Reports path: %s", settings.reports_dir)
@@ -56,6 +61,9 @@ app.add_middleware(
 app.include_router(documents.router)
 app.include_router(audit.router)
 app.include_router(qa.router)
+app.include_router(auth_router)
+app.include_router(payments_router)
+app.include_router(admin_router)
 
 
 @app.get("/")

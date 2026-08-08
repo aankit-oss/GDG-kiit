@@ -5,6 +5,9 @@
 
 const BASE = '/api'
 
+/** Base URL for direct fetch calls (e.g. auth, payments). Empty = same origin. */
+export const API_BASE = ''
+
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, options)
   if (!res.ok) {

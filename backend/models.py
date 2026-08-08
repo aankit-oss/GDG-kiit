@@ -117,6 +117,7 @@ class QAResponse(BaseModel):
     cited_passages: list[CitedPassage] = []
     refused: bool = False
     refusal_reason: Optional[str] = None
+    detected_language: str = "en"   # ISO 639-1 code detected from question
     answered_at: datetime = Field(default_factory=datetime.utcnow)
 
 

@@ -17,6 +17,13 @@ class Settings(BaseSettings):
     nvidia_api_key: str = ""
     gemini_api_key: str = ""
 
+    # Auth
+    jwt_secret: str = "change-me-in-production-use-a-long-random-string"
+
+    # Razorpay
+    razorpay_key_id: str = ""
+    razorpay_key_secret: str = ""
+
     # NVIDIA NIM endpoint (OpenAI-compatible)
     nvidia_base_url: str = "https://integrate.api.nvidia.com/v1"
     nvidia_model: str = "meta/llama-3.1-70b-instruct"
