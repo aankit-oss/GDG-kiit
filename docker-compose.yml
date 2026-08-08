@@ -1,0 +1,33 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - NVIDIA_API_KEY=${NVIDIA_API_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - CHROMA_PERSIST_PATH=/data/chroma
+      - REPORTS_DIR=/data/reports
+      - RULES_DIR=/app/../rules
+      - CORS_ORIGINS=["http://localhost:3000","http://frontend"]
+    volumes:
+      - lexaudit_data:/data
+      - ./rules:/app/../rules:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+
+volumes:
+  lexaudit_data:
+    driver: local

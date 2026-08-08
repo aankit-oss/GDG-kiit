@@ -1,9 +1,61 @@
-# Environment variables
+# ── Secrets & Environment ─────────────────────────────────────────────────────
 .env
 .env.local
 .env.*.local
 .env.production
 .env.development
-
-# Exceptions (keep templates tracked)
 !.env.example
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+htmlcov/
+.coverage
+coverage.xml
+
+# ── Node / Frontend ───────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+e2e/node_modules/
+e2e/playwright-report/
+e2e/test-results/
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+# (docker-compose.yml IS committed — only ignore generated state)
+
+# ── Project Data (runtime, not source) ───────────────────────────────────────
+chroma_data/
+audit_reports/
+*.db
+*.sqlite
+
+# ── Editors & OS ─────────────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Spec Kit ─────────────────────────────────────────────────────────────────
+# Only keep constitution.md — everything else is generated tooling
+.specify/commands/
+.specify/integrations/
+.specify/scripts/
+.specify/templates/
+.specify/workflows/
+.specify/init-options.json
+.specify/integration.json
+.specify/.gitignore

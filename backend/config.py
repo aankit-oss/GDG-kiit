@@ -1,9 +1,18 @@
 """Application configuration via environment variables."""
-from pydantic_settings import BaseSettings
 from pathlib import Path
+
+from pydantic import ConfigDict
+from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
+    model_config = ConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        case_sensitive=False,
+        extra="ignore",
+    )
+
     # LLM API Keys
     nvidia_api_key: str = ""
     gemini_api_key: str = ""
@@ -34,11 +43,6 @@ class Settings(BaseSettings):
     app_name: str = "LexAudit"
     debug: bool = False
     cors_origins: list[str] = ["http://localhost:3000", "http://localhost:5173"]
-
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
-        case_sensitive = False
 
 
 settings = Settings()
